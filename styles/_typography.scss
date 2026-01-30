@@ -1,0 +1,14 @@
+.heading {
+    &-2 {
+        font-size: 3rem;
+        letter-spacing: -1px;
+        line-height: 3.5rem;
+        &__sub {
+            color: var(--color-white);
+        }
+    }
+}
+p {
+    font-size: 1.4rem;
+    color: var(--color-grey);
+}
