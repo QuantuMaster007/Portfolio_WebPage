@@ -69,7 +69,8 @@ const index: React.FC<indexProps> = () => {
           name='description'
           content='Technical Program Manager driving hardware execution, CapEx planning, and NPI readiness at scale.'
         />
-        <link rel='icon' href='/vercel.svg' />
+        {/* ✅ Favicon updated */}
+        <link rel='icon' href='/favicon.svg' />
       </Head>
 
       {/* ================= HEADER / HERO ================= */}
@@ -115,20 +116,27 @@ const index: React.FC<indexProps> = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition }}
               className='home-hero__footer'>
-              <a href='https://github.com/QuantuMaster007' target='_blank'>GitHub</a>
-              <a href='https://www.linkedin.com/in/sourabh232/' target='_blank'>LinkedIn</a>
+              <a href='https://github.com/QuantuMaster007' target='_blank' rel='noreferrer'>GitHub</a>
+              <a href='https://www.linkedin.com/in/sourabh232/' target='_blank' rel='noreferrer'>LinkedIn</a>
               <a href='mailto:sourabh232@gmail.com'>Email</a>
             </motion.div>
           </div>
         </div>
 
+        {/* ✅ Hero video */}
         <div className='home-header__right'>
-          <motion.img
-            initial={{ opacity: 0, scale: 1.2, x: 200 }}
-            animate={{ opacity: 1, scale: 1, x: 0, transition }}
-            src='webp/header-bg.webp'
-            alt='ambient tech background'
-          />
+          <motion.video
+            className='hero-video'
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload='auto'
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1, transition }}
+          >
+            <source src='webp/header-bg.mp4' type='video/mp4' />
+          </motion.video>
         </div>
       </header>
 
@@ -138,12 +146,11 @@ const index: React.FC<indexProps> = () => {
           <div className='feature-container'>
             <h2 className='heading-2'>About Me</h2>
             <p className='paragraph'>
-              I’m a Technical Program Manager with 7+ years of experience partnering with
-              engineering, operations, and supply chain teams to deliver complex, capital-intensive
-              hardware programs.
+              I’m a Technical Program Manager with 7+ years of experience partnering with engineering,
+              operations, and supply chain teams to deliver complex, capital-intensive hardware programs.
               <br /><br />
-              I focus on disciplined execution, clear ownership, and early risk identification to
-              ensure programs are truly ready to scale.
+              I focus on disciplined execution, clear ownership, and early risk identification to ensure
+              programs are truly ready to scale.
             </p>
           </div>
         </section>
@@ -157,10 +164,16 @@ const index: React.FC<indexProps> = () => {
               <div className='gallery__left'>
                 <h3>CapEx Factory Readiness Framework</h3>
                 <p>
-                  A framework to assess factory readiness across people, process, materials, and
-                  equipment to support early capital decisions.
+                  A framework to assess factory readiness across people, process, materials, and equipment
+                  to support early capital decisions.
                 </p>
-                <a href='https://github.com/QuantuMaster007/CapEx_Factory_Readiness' target='_blank'>
+                <p className='paragraph'>
+                  <em>
+                    Enabled earlier capital and capacity decisions by surfacing factory readiness gaps
+                    before build execution.
+                  </em>
+                </p>
+                <a href='https://github.com/QuantuMaster007/CapEx_Factory_Readiness' target='_blank' rel='noreferrer'>
                   View on GitHub
                 </a>
               </div>
@@ -171,7 +184,13 @@ const index: React.FC<indexProps> = () => {
                   A system-level approach to managing interfaces, dependencies, and integration risks
                   across complex hardware subsystems.
                 </p>
-                <a href='https://github.com/QuantuMaster007/Interface_N_Integration' target='_blank'>
+                <p className='paragraph'>
+                  <em>
+                    Reduced system-level integration risk by defining clear ownership and dependency
+                    management across teams.
+                  </em>
+                </p>
+                <a href='https://github.com/QuantuMaster007/Interface_N_Integration' target='_blank' rel='noreferrer'>
                   View on GitHub
                 </a>
 
@@ -180,18 +199,31 @@ const index: React.FC<indexProps> = () => {
                   A program-level framework for supplier risk management, long-lead mitigation, and
                   execution during NPI and ramp.
                 </p>
-                <a href='https://github.com/QuantuMaster007/supply-chain-control' target='_blank'>
+                <p className='paragraph'>
+                  <em>
+                    Improved program predictability by identifying long-lead and single-source risks early
+                    and aligning suppliers to build timelines.
+                  </em>
+                </p>
+                <a href='https://github.com/QuantuMaster007/supply-chain-control' target='_blank' rel='noreferrer'>
                   View on GitHub
                 </a>
 
                 <h3>NPI Program Management Playbook</h3>
                 <p>
-                  A practical playbook covering NPI planning, governance, and execution across
-                  Proto, EVT, DVT, and PVT.
+                  A practical playbook covering NPI planning, governance, and execution across Proto,
+                  EVT, DVT, and PVT.
+                </p>
+                <p className='paragraph'>
+                  <em>
+                    Established a structured NPI execution model to drive build readiness and cross-functional
+                    alignment end to end.
+                  </em>
                 </p>
                 <a
                   href='https://github.com/QuantuMaster007/NPI_Program_Management_Playbook'
-                  target='_blank'>
+                  target='_blank'
+                  rel='noreferrer'>
                   View on GitHub
                 </a>
               </div>
